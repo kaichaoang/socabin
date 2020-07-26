@@ -5,9 +5,14 @@ import { firebase, database, storage, auth } from "../index";
 
 
 class EditProfileComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.imageRef = React.createRef();
+  }
+  
   render() {
     //reference
-    database.ref("users").on("value", this.getData); 
+    database.ref("users").on("value", this.getData);
 
     return (
       <div className="backgroundEditProfile">
@@ -28,17 +33,23 @@ class EditProfileComponent extends React.Component {
                   multiple={false}
                   accept="image/*"
                   id="inputImg"
+                  ref={this.imageRef}
                   onChange={() => this.inputDetected()}
                 />
               </div>
             </div>
 
             <div className="preview-container" id="previewContainer">
-              <img src="/Images/Avatar.png" alt="" className="preview-image" />
+              <img
+                src="../Images/cactus.jpg"
+                alt=""
+                className="preview-image"
+                id="previewImg"
+              />
               <span className="default-preview">
                 Upload Profile Image
                 <p className="detail">
-                  Kindly wait for approximately 5s for uploading to be possible.
+                  Kindly centralise your desired content in the image.
                 </p>
               </span>
             </div>
@@ -140,49 +151,46 @@ class EditProfileComponent extends React.Component {
     );
   }
   //----------------------editprofile----------------------
-  
 
   closePopup = () => {
     window.location.replace("/profile");
-  }
+  };
 
   inputDetected = () => {
-    const inputImg = document.getElementById("inputImg");
+    const imageNode = this.imageRef.current;
+
     const previewImage = document.querySelector(".preview-image");
 
-    if (inputImg !== null) {
-      inputImg.addEventListener("change", function () {
-        //get file
-        const imgFile = this.files[0];
+    if (imageNode !== null) {
+      //get file
+      const imgFile = imageNode.files[0];
 
-        if (imgFile) {
-          //get storage ref
-          var storageRef = storage.ref(auth.currentUser.email + "/profile");
+      if (imgFile) {
+        //get storage ref
+        var storageRef = storage.ref(auth.currentUser.email + "/profile");
 
-          //store img
-          storageRef.put(imgFile);
+        //store img
+        storageRef.put(imgFile);
 
-          const reader = new FileReader();
+        const reader = new FileReader();
 
-          document.querySelector(".default-preview").style.display = "none";
-          document.querySelector(".preview-image").style.display = "block";
+        document.querySelector(".default-preview").style.display = "none";
+        document.querySelector(".preview-image").style.display = "block";
 
-          reader.addEventListener("load", function () {
-            document
-              .querySelector(".preview-image")
-              .setAttribute("src", this.result);
-          });
-
-          reader.readAsDataURL(imgFile);
-
-        } else {
-          document.querySelector(".default-preview").style.display = null;
-          document.querySelector(".preview-image").style.display = null;
+        reader.addEventListener("load", function () {
           document
             .querySelector(".preview-image")
-            .setAttribute("src", previewImage.getAttribute("src"));
-        }
-      });
+            .setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(imgFile);
+      } else {
+        document.querySelector(".default-preview").style.display = null;
+        document.querySelector(".preview-image").style.display = null;
+        document
+          .querySelector(".preview-image")
+          .setAttribute("src", previewImage.getAttribute("src"));
+      }
     }
   };
 
@@ -275,8 +283,9 @@ class EditProfileComponent extends React.Component {
             console.log("Remove failed: " + error.message);
           });
       }
-      document.getElementById("msgProfile").innerHTML = "Updated successfully! Returning you to your profile...";
-      document.getElementById("popupProfile").classList.toggle("active"); 
+      document.getElementById("msgProfile").innerHTML =
+        "Updated successfully! Returning you to your profile...";
+      document.getElementById("popupProfile").classList.toggle("active");
     } catch (err) {
       document.getElementById("msgProfile").innerHTML = err.message;
       document.getElementById("msgProfile").classList.toggle("active");
