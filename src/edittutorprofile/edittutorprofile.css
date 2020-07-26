@@ -15,6 +15,7 @@
     height: 100%;
     width: 100%;
     padding: 0.1px;
+    overflow: auto;
 }
 
 .popup-Tprofile .overlay-Tprofile {
