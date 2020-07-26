@@ -125,9 +125,9 @@ class SignUpComponent extends React.Component {
   }
 
    createFile = async (email) => {
-      let response = await fetch(
-        "https://cdn1.vectorstock.com/i/1000x1000/51/05/male-profile-avatar-with-brown-hair-vector-12055105.jpg"
-      );
+      var proxyUrl = "https://cors-anywhere.herokuapp.com/",
+        targetUrl = "https://cdn1.vectorstock.com/i/1000x1000/51/05/male-profile-avatar-with-brown-hair-vector-12055105.jpg";
+      let response = await fetch(proxyUrl + targetUrl);
       let data = await response.blob();
       let metadata = {
         type: 'image/jpeg'
