@@ -1,0 +1,221 @@
+
+.backgroundProfile {
+    background-image: url(../Images/mist-misty-fog-foggy-7919.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 0.1px;
+    overflow: auto;
+}
+
+.profile-body-raised-profile {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+
+    margin-top: 7%;
+    margin-bottom: 6%;
+    -webkit-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    -moz-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+}
+
+.profile-content-centered {
+    text-align: center;
+}
+
+.profile-content-centered img {
+    width: 13%;
+    height: 24vh;  /* (!) need to make this height same as the value for the width */
+    /* transform: translate3d(0, -70%, 0); */
+    margin-bottom: 5px;
+}
+
+.profile-content-centered .avatar-rounded {
+    border-radius: 50%;
+}
+
+.profile-content-centered .avatar-raised {
+    box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.buttons-align-right {
+    text-align: right;
+}
+
+.buttons-align-right a {
+    padding: 10px 20px;
+    margin: 4px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    background:  #5555558e;
+    border-radius: 1.5em;
+}
+
+.buttons-align-right a:hover {
+    opacity: 0.8;
+}
+
+/* .profile-content-below-avatar {
+    margin-top: -10%;
+} */
+
+#full-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#email {
+    font-size: 15px;
+}
+
+#role {
+    font-size: 15px;
+    margin-top: 0px;
+}
+#year-and-major {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#box-left {
+    margin-left: 20%;
+    float: left;  
+    background: transparent;
+    width: 20%; 
+    height: auto;
+    padding: 20px;
+    color: rgba(22, 53, 78, 0.925);
+}
+
+#box-left h6 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+#box-middle {
+    float: left;  
+    background: transparent;
+    color: rgba(22, 53, 78, 0.925);
+    /* background: transparent; */
+    width: 20%; 
+    height: auto; 
+    border-radius: 2em;
+    padding: 20px;
+    border: 2px solid rgba(22, 53, 78, 0.3)
+
+    /* -webkit-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    -moz-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78); */
+}
+
+#box-right {
+    margin-right: 20%;
+    float: left;  
+    background: transparent;
+    width: 20%; 
+    height: auto;
+    padding: 20px;
+    color: rgba(22, 53, 78, 0.925);
+}
+
+#box-right h6 {
+    font-size: 15px;
+    margin: 5px;
+}
+
+.clear { 
+    clear:both
+}
+
+.boxes-adjacent {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+
+#modules-profile, #goals-profile, #biography-profile {
+  font-size: 17px;
+}
+
+.buttons-align-right button {
+    padding: 10px 20px;
+    margin: 4px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    background:  #5555558e;
+    border-radius: 1.5em;
+    outline: none;
+}
+
+.buttons-align-right button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.popup-nottutor .overlay-nottutor {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup-nottutor .content-nottutor {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:550px;
+  height:150px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+  border-radius:20px;
+}
+
+.popup-nottutor .close-btn-nottutor {
+  cursor:pointer;
+  position:absolute;
+  right:5px;
+  top:5px;
+  width:30px;
+  height:30px;
+  color:rgba(255, 0, 0, 0.705);
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup-nottutor.active .overlay-nottutor {
+  display:block;
+}
+
+.popup-nottutor.active .content-nottutor {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.errorMsg-nottutor {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -38%)
+
+}

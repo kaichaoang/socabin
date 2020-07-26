@@ -1,0 +1,85 @@
+.directories-user {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    background-image: url(../Images/beach.jpg);
+
+    /*raise the navbar */
+    -webkit-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    -moz-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+} 
+
+.logo-user {
+    width: 8%;
+    height: 4%;
+    margin-right: auto;
+}
+
+.directories-list-user {
+    list-style: none;
+}
+
+.directories-list-user .link-user {
+    display: inline-block;
+}
+
+.directories-list-user .link-user a {
+    transition: all 0.3s ease 0s;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500px;
+    
+}
+
+.directories-list-user .link-user a:hover {
+    color: #4cbbd6;
+}
+
+.directories-list-user .link-user ul {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 1%;
+}
+
+.directories-list-user .link-user ul li {
+    /* margin: 20px; */
+    background-color: rgba(243, 222, 199, 0.747);
+    padding: 10px 5px;
+}
+
+.directories-list-user .link-user:hover ul {
+    visibility: visible;
+
+}
+
+.directories-user .dropdown-user {
+    text-align: center;
+    
+}
+
+.directories-user .dropdown-user li a{
+    padding: 10px 2px;  
+}
+
+.dropdown-words {
+    font-size: 10px;
+    
+}
+/* 
+.directories-user .dropdown-user li button{
+    padding: 10px 2px;
+}
+
+.directories-list-user .link-user button {
+    transform: translate(500%, 0%);
+    background: none;
+    width: 1px;
+} */

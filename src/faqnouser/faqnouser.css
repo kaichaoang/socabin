@@ -1,0 +1,58 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+} */
+
+.backgroundFAQ {
+    background-image: url(../Images/cactus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.page-body {
+    padding: 50px;
+}
+
+.header {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.questions-body {
+    margin: 20px 50px;
+    width: 70vw;
+}
+
+
+.questions-body h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.questions-body h5 {
+    margin-bottom: 5px;
+}
+
+.questions-body p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#creators {
+    background: rgb(93, 109, 180);
+    color: white;
+    padding: 30px 8%;
+}
+
+#creators p {
+    padding-left: 2%;
+}
+
+.year {
+    font-size: 10px;
+}

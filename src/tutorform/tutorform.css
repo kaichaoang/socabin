@@ -1,0 +1,154 @@
+
+.backgroundTutorForm {
+    background-image: url(../Images/light-bulb-on-white-panel-1166643.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0.1px;
+}
+
+.tutor-form {
+    padding-top: 6%;
+}
+
+.form-body {
+    margin: 5% 30%;
+    padding: 25px;
+    border: 2px solid rgb(96, 107, 194);
+    border-radius: 15px;
+    box-shadow: 0 0 3px black;
+}
+
+.page-header h3 {
+    font-size: 25px; 
+}
+
+.page-header p {
+    font-size: 12px;
+    font: lighter;
+}
+
+.page-header {
+    margin-bottom: 10px;
+    margin-left: 5%; 
+    margin-right: 45%;
+}
+
+#module-label p {
+    font-size: 12px;
+    font: lighter;
+}
+
+label {
+    font-size: 16px;
+}
+
+.module-one {
+    margin-top: -10px;
+}
+
+.timings{
+    margin: 20px 0px;
+}
+
+.fees {
+    margin: 20px 0px;
+}
+
+.information {
+    /* border-radius: 0px;
+    outline: none;
+    height: 1px; */
+    margin: 20px 0px;
+}
+
+.timings textarea {
+    display: flex;
+}
+
+.fees textarea {
+    display: flex;
+}
+
+.info textarea {
+    display: flex;
+}
+
+textarea {
+    padding: 5px;
+}
+
+.text {
+    color: black;
+}
+
+#submit {
+    margin: 10px 42%;
+    padding: 2px 5px;
+}
+
+.grades {
+    width: 8%;
+}
+
+.popup-apply .overlay-apply {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup-apply .content-apply {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:550px;
+  height:150px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+  border-radius:20px;
+}
+
+.popup-apply .close-btn-apply {
+  cursor:pointer;
+  position:absolute;
+  right:5px;
+  top:5px;
+  width:30px;
+  height:30px;
+  color:rgba(255, 0, 0, 0.705);
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup-apply.active .overlay-apply {
+  display:block;
+}
+
+.popup-apply.active .content-apply {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.msg-apply {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -38%)
+
+}

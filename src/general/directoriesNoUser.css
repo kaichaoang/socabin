@@ -1,0 +1,69 @@
+.directories-noUser {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5%;
+    width: 100%;
+    /* background: rgba(177, 234, 252, 0.4); */
+    position: fixed;
+    top: 0;
+    background-image: url(../Images/beach.jpg);
+
+    /*raise the navbar */
+    -webkit-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    -moz-box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+    box-shadow: 10px 9px 26px -2px rgba(0,0,0,0.78);
+} 
+
+.logo-noUser {
+    width: 8%;
+    height: 4%;
+    margin-right: auto;
+}
+
+.directories-list-noUser {
+    list-style: none;
+}
+
+.directories-list-noUser .link-noUser {
+    display: inline-block;
+}
+
+.directories-list-noUser .link-noUser a {
+    transition: all 0.3s ease 0s;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500px;
+}
+
+.directories-list-noUser .link-noUser a:hover {
+    color: #4cbbd6;
+}
+
+.directories-list-noUser .link-noUser ul {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.directories-list-noUser .link-noUser ul li {
+    /* margin: 20px; */
+    background: rgba(36,37,42);
+    padding: 10px 5px;
+    color:white;
+}
+
+.directories-list-noUser .link-noUser:hover ul {
+    visibility: visible;
+}
+
+.directories-noUser .dropdown {
+    text-align: center;
+}
+
+.directories-noUser .dropdown li a{
+    padding: 10px 2px;
+    font-size: 13px;
+}
