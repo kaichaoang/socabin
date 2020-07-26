@@ -35,7 +35,7 @@ class AboutUsComponent extends React.Component {
   render() {
     return (
       <div className="backgroundAboutUs">
-        <DirectoriesUserComponent></DirectoriesUserComponent> 
+        <DirectoriesUserComponent></DirectoriesUserComponent>
         <div>
           <div className="top-half">
             <div id="page-one-content" className="header">
@@ -76,10 +76,10 @@ class AboutUsComponent extends React.Component {
               <div className="inner">
                 <h4>Features</h4>
                 <p>
-                  A convenient chat interface
-                  <br />A group formation system
+                  A user-friendly search bar and tutor matching system
+                  <br />A convenient tutor sorting system
                   <br />
-                  Informative academic forums
+                  An elegant easy-to-use chat interface
                 </p>
                 <input
                   id="meet"

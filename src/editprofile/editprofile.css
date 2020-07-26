@@ -10,6 +10,7 @@
     background-image: url(../Images/light-bulb-on-white-panel-1166643.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow:auto;
 }
 
 .page-body {
