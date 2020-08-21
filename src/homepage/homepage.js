@@ -193,8 +193,18 @@ class HomePageComponent extends React.Component {
 
     //if query is blank
     if(query == "") {
-      document.getElementById("errorMsgHome").innerHTML =  "Search field is empty";
-      document.getElementById("popupHome").classList.toggle("active");
+      this.state.modal.push(
+        <div style = {{display:"block"}} id="myModal" className="modal">
+            <div className="modal-content">
+              <span onKeyUp={(e) => this.userTyping(e)} onClick={ this.closeModal } className="close">&times;</span>
+              <div className="modal-header">
+                <h4>{"Your search: " + this.state.query}</h4>
+              </div>
+              <p id="noTutorMsg">Search field is empty!</p>
+            </div>
+          </div>
+      );
+      this.setState({query: ''});
       return false;
     } else {
       const dataMap = this.state.data;
@@ -270,10 +280,18 @@ class HomePageComponent extends React.Component {
     this.state.modal = [];
 
     if(results.length == 0) {
-      document.getElementById("errorMsgHome").innerHTML =  "No matching tutors found.";
-      document.getElementById("popupHome").classList.toggle("active");
+      this.state.modal.push(
+        <div style = {{display:"block"}} id="myModal" className="modal">
+            <div className="modal-content">
+              <span onKeyUp={(e) => this.userTyping(e)} onClick={ this.closeModal } className="close">&times;</span>
+              <div className="modal-header">
+                <h4>{"Your search: " + this.state.query}</h4>
+              </div>
+              <p id="noTutorMsg">No matching tutors found!</p>
+            </div>
+          </div>
+      );
       this.setState({query: ''});
-      return false;
     } else {
       this.state.modal.push(
         <div style = {{display:"block"}} id="myModal" className="modal">

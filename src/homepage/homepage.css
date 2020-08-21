@@ -376,3 +376,9 @@ li #email, li #modulesAndGrades, li #fees {
     transform: translate(-50%, -38%)
 
 }
+
+#noTutorMsg {
+    padding: 20% 35%;
+    color: rgb(216, 72, 72);
+    font-size: medium;
+}
